@@ -1,0 +1,16 @@
+Why We need Linear Regression?
+
+Linear regression is going to provide outcome prediction with the 
+help of mathematical relationship between input features and the target outcome
+
+Its designed to predict continuous outcomes rather than the binary values
+
+This is the baseline model. That means this is the first model we can start with. If this is not satisfying the problem requirements , more complex models can be explored
+
+What is the Advantage Of Linear Regression compared with the other ML models?
+
+1. Linear regression quantify clearly how much a given feature is impacting the prediction using interpretable predictions
+2. Linear regression can even work with small and medium data sets and doesn't require large amounts of data
+3. Due to its transperent mathematical structure linear regression strongly supports debugging, explainability and interpretability
+
+
