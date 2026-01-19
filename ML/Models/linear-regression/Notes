@@ -13,4 +13,24 @@ What is the Advantage Of Linear Regression compared with the other ML models?
 2. Linear regression can even work with small and medium data sets and doesn't require large amounts of data
 3. Due to its transperent mathematical structure linear regression strongly supports debugging, explainability and interpretability
 
+How we can tell by seeing the data that we can go with linear regression?
+
+1. Target or outcome  must be continous, it shouldn't be binary
+2. If we plot the relationship between features and the outcome, the graph must be roughly linear
+3. If we make small change in the feature, outcome also changes in the same proportion
+4. If we need explainability,debugging and interpretability 
+5. If our dataset size if small or medium
+
+How do we detect drift using linear regression techniques?
+
+We detect the drift in the following ways
+
+1. We monitor the actual value vs expected value. By drawing graphs manually. We trigger alert in case we see a huge drift
+2. We monitor the concep drift. Where the drift is caused because of the relationship changed between features and outcome.After retraining we observe that only coefficients are changed in the model  
+3. Features themselves got changed their distribution. For ex: While training we have see features .The range or frequency of feature values increases. Thats why prediction got changed
+4. Performance monitoring parameters:  Rsquare and RMSE. Rsquare value is 0.9 means, model can expalin 90% of the variance in the outcome. If Rsquare value git decreased means, model won't be able
+to explain the outcome. RMSE: This is in same units as the outcome. This shows average prediction error in the model. if RMSE value is more then there is more average error in the prediction of the model
+5. Statistical hypothiesis testing measure the drift. If the hypothesis tests proves that there is more drift  then model is changed. It need retraining
+
+In all these cases prediction went bad. We are seeing that from different prospectives 
 
