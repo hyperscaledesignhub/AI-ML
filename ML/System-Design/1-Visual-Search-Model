@@ -1,0 +1,23 @@
+Goal: Given an input image to the model the model must return visually similar images. That means the model
+returns list of images similar to the input image in the order of increasing in the rank
+
+Can you list different steps in the Model development?
+
+Following are the high level steps in developing any ML model
+
+1. Selecting the right model for the given functionality
+2. We need to prepare the input dataset for the model
+3. We need to come up the loss function of the model
+4. Training the model
+5. Evaluation of Model Quality
+6. Serving the model into production
+
+1. 
+
+Preparing the input dataset for the model
+In this step we need to come up with what is the input image and what is the target or label image
+    1. Human labeling: Humans are identifying what is the input image and what are all the expected images
+    that has to be shown to the model. Manually humans prepare
+    2. User interaction from the real website: When people are searching for an image and clicking the image after searching, we take both details by adding logs to the system. By using this we prepare data where input is the image and output is set of different images users have clicked for this giveb input image. That means if a user search for metallic cup,  there are so man varities are shown, out of this suppose 50 users clicked 20 varieites, then we chose top one as the input and rest of them as the output.
+    3. Augmentation of the input image:  We are going to use some image tools and we are going to tilt and crop the images by automation provided by the tools without human intervention. Here input is the image the image we gave and the output is the set of modified images produced by the tools
+    4. Selecting the right methodology: We are going with option(3) because it is going to help us to automate the process without any human intervention 
