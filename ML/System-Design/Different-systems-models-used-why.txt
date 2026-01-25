@@ -1,0 +1,21 @@
+Google street view blurring system
+    The requirement here is given an image we need to blurr the privacy regions in the image
+    That means we need to blurr the faces of people, we need to blur the licence plates of cars,
+    we need to blur the house numbers in the images etc.
+
+    Here we have limited training data. Hence we need to have more accuracy than the prediction time
+    Thats why we have chosen a 2 stage ML model. 
+    Where we initially use CNN Resnet50() to extract image features, like edges and corners of the image
+    After that we use 2 stage process
+    In stage-1 we detect the object location in the image by using linear regression
+    In stage-2 we classify the object into one of the multiple object list we have
+    After that we take decision to blur the image or not
+    Finally we show the image 
+    Stage-1 is called RPN: Region Proposal Network
+    Stage-2 is called ROI Head ( Region Of Interest Head )
+
+    Before going to stage-1 and stage-2 following operations are done
+    CNN and RPN operates 2D feature space to extract features and locate Objects
+    After this ROI pooling convert 2D space into fixed size 1D representation
+    After this inside ROI fully connected layers perform multiclass classification with 
+    softmax applied internally
