@@ -26,7 +26,7 @@ How do we detect drift using linear regression techniques?
 We detect the drift in the following ways
 
 1. We monitor the actual value vs expected value. By drawing graphs manually. We trigger alert in case we see a huge drift
-2. We monitor the concep drift. Where the drift is caused because of the relationship changed between features and outcome.After retraining we observe that only coefficients are changed in the model  
+2. We monitor the concept drift. Where the drift is caused because of the relationship changed between features and outcome.After retraining we observe that only coefficients are changed in the model  
 3. Features themselves got changed their distribution. For ex: While training we have see features .The range or frequency of feature values increases. Thats why prediction got changed
 4. Performance monitoring parameters:  Rsquare and RMSE. Rsquare value is 0.9 means, model can expalin 90% of the variance in the outcome. If Rsquare value git decreased means, model won't be able
 to explain the outcome. RMSE: This is in same units as the outcome. This shows average prediction error in the model. if RMSE value is more then there is more average error in the prediction of the model
