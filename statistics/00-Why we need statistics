@@ -1,0 +1,40 @@
+We need statistics for the following reason:
+
+Statistics deals with collection, organisation, analysis, interpretation and 
+presentation of the data
+
+We are using the business data with the help of some statistical tools to make the decision
+
+For ex:
+Online shopping there are some age groups data = {26,32,21,23,24,17,18}
+We use statistics using tools to find out following:
+1 Mean 
+2 Median of the age
+3.Distribution of the age
+
+ALso we can use this data and can create Charts and Graphs like following
+1. Histogram
+2. PDF ( Probability Density function)
+3. CDF ( cumulative Density function)
+
+By using histogram data we plot pdf
+
+Why do we need charts?
+
+we need charts understand the business data and make some decisions
+
+This helps business to grow 
+
+Suppose a company want to open a book stall in one of the area in city
+Then they take decision based on current company data with the help of statistics: 
+Whats the mean business transaction, ..etc ?
+
+These decisions are called statistical decisions
+Applications 
+
+1. Every one use 
+2. Machine learning
+3. Data analyst
+4. Business analyst
+5. Risk analysts
+Every domain and field statistics is used
