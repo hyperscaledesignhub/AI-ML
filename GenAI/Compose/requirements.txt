@@ -1,0 +1,5 @@
+1. Different users have different writing styles, are we going to expect
+to make personalised suggestions?
+No We are not caring about personalised suggestions 
+
+2.What is the system size to train the model. What is the size of the data?
