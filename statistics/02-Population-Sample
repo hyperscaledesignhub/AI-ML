@@ -1,0 +1,7 @@
+Suppose in a state we want to find the average height:
+
+Suppose state has overall 500K people, this is called:  Population
+While measuring heights we took: 10K people randomly from different parts, this 10K is called: Sample 
+
+Population denoted by:  N ( capital N)
+Sample is denoted by : n (small N)
