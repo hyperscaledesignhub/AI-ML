@@ -1,0 +1,19 @@
+Mean: 
+For population:  Population Mean:
+  μ = Σx / N
+
+  Where:
+  - μ (mu) = population mean
+  - Σx = sum of all values
+  - N = total number of values in the population
+  
+Sample Mean:
+  x̄ = Σx / n
+
+  Where:
+  - x̄ (x-bar) = sample mean
+  - Σx = sum of all sample values
+  - n = number of values in the sample
+
+  The key difference is that population mean uses N (entire population size) while sample mean uses n
+  (sample size).
