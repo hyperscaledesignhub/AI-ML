@@ -1,0 +1,28 @@
+Descriptive statistics:
+Tecnhiques used for organising and summarising the data is called Descriptive statistics 
+
+Tecnhiques are =>  1. Measure of Central Tendency: This has 3 types: 
+1. Mean 2. Median 3. Mode
+
+2. Measure of dispersion: 
+ 1. Variance
+ 2. Standard Deviation
+
+
+          
+Inferential satistics:  
+
+Collect Data, make inferences using some experiments 
+this is called inferential statistics 
+Experiments used are: Z test and T test 
+The data we collect to make inferences is called => Sample data
+The data we make consensus on is called => Population data 
+
+Population data >> sample Data
+
+Example:
+We have sample of employees salaries in the industry: {10k,50k,20k,30k,40k}
+Descriptive statistics use Mean,Median and Average values 
+Where as Inferential Statistics find: 
+What is the salary of 1000 employees by using above sample employee salaries
+1000 employees is population data 
