@@ -1,0 +1,29 @@
+Fine tuning the model.
+
+Fine tuning means: Training the model on specific Task. Here in
+auto completion case, we are going to train on specific task of auto 
+completion 
+We retain the base training knowledge what it has during the pre training 
+stage 
+
+How we fine tune?
+We use the data set of 1 billion email messages for training on auto completion 
+task 
+
+ML Objective and loss function 
+
+ML Objective and loss function remain same,i.e., we use next token prediction 
+as the ML task and cross entropy is the loss function 
+But only difference is loss is calculated based on email data 
+
+How we train on auto completion task?
+
+We give email body and also email subject recipents and previous email 
+conversations as part of email training 
+We take billions of different such emails and fine tune on the task. 
+Why email body is not only sufficient?
+because some email don't have any body they just have receipient name
+For i am sending mail to john, then once i type Dear... it should 
+suggest next token "John", thats possible only if we consider subect 
+recepient email details and old mails 
+
