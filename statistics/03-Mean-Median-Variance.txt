@@ -1,3 +1,5 @@
+Measure of central tendency 
+
 Mean: 
 For population:  Population Mean:
   μ = Σx / N
@@ -6,7 +8,7 @@ For population:  Population Mean:
   - μ (mu) = population mean
   - Σx = sum of all values
   - N = total number of values in the population
-  
+
 Sample Mean:
   x̄ = Σx / n
 
@@ -17,3 +19,32 @@ Sample Mean:
 
   The key difference is that population mean uses N (entire population size) while sample mean uses n
   (sample size).
+
+  For ex: We have numbers 1,3,4,5 => Mean =  (1+3+4+5)/4 = 3.25 
+
+  Median: 
+  suppose we have: {1,3,4,5,100}, then Mean= (1+3+4+5+100)/5 = 22.6, because 100 is an outlier
+  Otherwise mean should be 3.25 
+
+  To overcome this median introduced:
+  To find median,
+  1. we sort the numbers
+  2. Then instead of finding average just pickup the central element 
+  For the above example, where total number of elements are odd
+  {1,3,4,5,100} => central element is: 4 
+  In case total number of elements are even, the average of middle 2 elements 
+  is the median 
+  That means even after we add 100, if we take median the centre value 
+  is not shifted much. 
+
+  Even some outlier is there median never impacts the central tendency 
+
+  Suppose if we add 200, them median = (4+5)/2 = 4.5. That means 
+  even after adding 2 outliers the median is not shifted much 
+
+  Mode 
+
+  Suppose i have numbers: {4,3,2,1,1,4,4,5,2,100} 
+  We select the element which has maximum frequency 
+  freq {1:2, 4:4 .., }. Hence mode=4 
+  
