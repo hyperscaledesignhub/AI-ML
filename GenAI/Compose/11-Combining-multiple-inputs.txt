@@ -1,0 +1,16 @@
+Traditional ML: 
+Model architecture tied to specific data types (text, images, tables), requiring custom preprocessing and feature engineering for each.
+Generative AI (GenAI): 
+Model architecture is decoupled from input structure.
+Benefit of GenAI: Allows a single, unified model architecture to handle diverse inputs, 
+streamlining development and increasing versatility.
+Key Technique: This decoupling is achieved through prompt engineering.
+
+How smart compose use prompt engineering?
+
+Different email inputs (like recipient, subject, and the email body) 
+are combined into a single text sequence 
+using specific tags (e.g., [To], [Subject], [Body]). 
+This "prompt template" provides 
+all relevant context to the generative AI model 
+in a unified format for better predictions.
