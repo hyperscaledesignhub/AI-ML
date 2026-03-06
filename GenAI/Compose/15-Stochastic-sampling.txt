@@ -1,0 +1,10 @@
+Stochastic Sampling
+
+Method: Introduces randomness; samples tokens based on probability.
+Result: Output varies each time, even with same input.
+Pros:
+Diversity
+Novelty/Creativity
+Cons:
+Inconsistency
+Unexpected outputs

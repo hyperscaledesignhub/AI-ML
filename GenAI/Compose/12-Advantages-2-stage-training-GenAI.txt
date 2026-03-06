@@ -1,0 +1,21 @@
+Two-stage training is like teaching a student in two steps:
+
+Broad Learning (Pretraining): First, the model learns a lot about language 
+from huge general datasets. 
+This helps it understand a wide range of topics and how language works.
+
+Benefits: 
+--This makes the model very adaptable to many tasks, 
+--helps it generalize well to new situations, 
+--avoids overfitting (memorizing instead of learning).
+
+Efficiency: This expensive "broad learning" only needs to happen once.
+Specific Learning (Finetuning): Then, the model gets a quicker "top-up" training on 
+a smaller dataset for a specific task (like email completion).
+
+Benefits Of Specific Learning: This stage is much faster, helps if there's 
+limited data for the specific task,
+and saves computing resources because it builds 
+on the broad knowledge already gained.
+In short, it makes models more versatile, performs better, 
+and is more efficient, especially for tasks with less data.

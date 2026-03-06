@@ -1,0 +1,33 @@
+Greedy search is the simplest way for a generative AI model to pick the next word. 
+It works by always choosing the single word that the model predicts has 
+the highest probability at that exact moment.
+
+The main problem is that this "greedy" approach 
+often misses better overall sentences, as it doesn't look ahead.
+It just picks the immediate best choice, which can lead to 
+repetitive or less creative text, making it rarely used for 
+practical applications like Smart Compose.
+
+
+Greedy search is the simplest method for a generative AI model to create text. At each step, it simply picks the single word that has the highest probability of coming next.
+
+Simple Example:
+
+Imagine you're typing: "I want to eat a..."
+
+The model might see these probabilities for the next word:
+
+"pizza" (0.7 probability)
+"burger" (0.2 probability)
+"salad" (0.1 probability)
+Greedy search immediately picks "pizza" because it has the highest probability.
+
+Now the sentence is: "I want to eat a pizza." The model then predicts the next word for this sentence:
+
+"tonight" (0.8 probability)
+"with" (0.1 probability)
+"later" (0.05 probability)
+Greedy search picks "tonight". The final suggestion would be: "I want to eat a pizza tonight."
+
+The Problem: While "pizza tonight" sounds fine, greedy search's flaw is that it only thinks one step ahead. It never reconsiders if choosing a slightly less probable word initially (like "burger") might have opened up a much better or more diverse sentence later on (e.g., "I want to eat a burger that is extra juicy"). This often leads to repetitive or generic suggestions, which is why it's rarely used in practice.
+

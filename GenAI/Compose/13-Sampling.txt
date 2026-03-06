@@ -1,0 +1,23 @@
+Sampling in Generative AI Models
+
+What is Sampling?
+
+It's the process of using a trained generative model to create new data.
+Generative models learn the patterns of their training data and then produce 
+similar new samples.
+
+Sampling in Smart Compose:
+
+In Smart Compose, sampling means generating likely email completions 
+based on the user's partial input.
+This is done by predicting and adding one token (word or subword) at a time.
+The process continues iteratively: the model predicts the next token, that token is added 
+to the input, and the model predicts the next token again, 
+until an "End of Sequence" ($\langle$EOS$\rangle$) token is generated.
+
+Main Strategies for Text Generation:
+
+Deterministic: Generates text without randomness, always producing 
+the same output for a given input.
+Stochastic: Introduces randomness, meaning 
+outputs can vary even with the same initial input.
