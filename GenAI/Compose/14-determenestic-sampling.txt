@@ -1,0 +1,11 @@
+Deterministic Sampling
+
+Method: No randomness; model always selects the token with the highest probability.
+Result: Output is always the same for a given input.
+Example Algorithm: Greedy search (simple, picks highest probability token at each step).
+Pros:
+Consistency (predictable, repeatable results).
+Fewer surprising outputs.
+Cons:
+Lack of diversity/creativity.
+Can lead to repetitive text.
