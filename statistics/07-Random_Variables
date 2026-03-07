@@ -1,0 +1,35 @@
+Random Variables are denoted by; X 
+y= 2x+5 is a fucntion whose values are derived from different 
+values of x, x=1,2,3 .. etc 
+Similarly: Random Varibale is a Function, whose values are derived 
+from various experiments or processes 
+
+Ex:
+
+X =  Tossing a coin ( experiment) = H or T 
+
+X = 0 if H 
+X= 1 if T 
+
+Another experiment:
+
+Rolling a Dice 
+X =  1,2,3,4,5,6   there are 6 possibilities are there 
+in this experiment 
+
+What are the different types of Random Variables:
+Two types of Random Variables are there: 
+1. Discrete and 2. Continuos 
+
+1. Discrete Random Variables: 
+
+Tossing a coin or Rolling a Dice 
+
+2. Continuos Random Variable: 
+Earth water consumptions rate day to day  per person:  
+0L, 1.2L, 1.4L, 2.8L ... etc and there is no negative value 
+associated 
+
+
+
+

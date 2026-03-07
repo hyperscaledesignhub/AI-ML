@@ -8,7 +8,7 @@ set -e  # Exit on any error
 echo "🔄 Starting Git Auto-Sync..."
 
 # Navigate to the repository directory
-REPO_DIR="/Users/vijayabhaskarv/IOT/github/AI-ML"
+REPO_DIR="/Users/vijayabhaskarv/ml-projects/rag/advanced-rag/github"
 cd "$REPO_DIR"
 
 echo "📍 Working in: $(pwd)"
@@ -41,8 +41,17 @@ elif [ "$LOCAL" = "$BASE" ]; then
     echo "✅ Successfully pulled changes"
 elif [ "$REMOTE" = "$BASE" ]; then
     echo "⬆️  Ahead of remote. Pushing changes..."
-    git push
-    echo "✅ Successfully pushed changes"
+    if ! git push 2>/dev/null; then
+        echo "❌ Push failed. Remote has new changes. Fetching and merging..."
+        git fetch
+        git pull --no-rebase
+        echo "✅ Successfully merged remote changes"
+        echo "⬆️  Pushing merged changes..."
+        git push
+        echo "✅ Successfully pushed merged changes"
+    else
+        echo "✅ Successfully pushed changes"
+    fi
 else
     echo "🔀 Branches have diverged. Merging..."
     # Set pull strategy to merge (not rebase)

@@ -1,0 +1,61 @@
+Measure of dispersion 
+
+This is measured using following params:
+
+1. Variance
+2. Standard Deviation 
+
+Age-1 = {2,2,4,4} Age-2 = {1,1,5,5}
+Mean of Age-1 = (2+2+4+4)/4 = 3 
+Mean of Age-2 = (1+1+5+5)/4 = 3
+Both of them have same mean. But their distribution of data is different, Age-1 has points close to the mean 
+Where as Age-2 has points away from the mean 
+Spread is less in case of Age-1 and spread is more in case of Age-2
+
+What param can distinguish both age-1 and age-2 spread? Its with variance and Standard Deviation 
+
+ Population Variance:
+  σ² = Σ(x - μ)² / N
+
+  Where:
+  - σ² (sigma squared) = population variance
+  - x = each individual value
+  - μ = population mean
+  - N = total number of values in the population
+
+  Sample Variance:
+  s² = Σ(x - x̄)² / (n - 1)
+
+  Where:
+  - s² = sample variance
+  - x = each individual value
+  - x̄ = sample mean
+  - n = sample size
+  - (n - 1) = degrees of freedom (Bessel's correction)
+
+  Key difference: Sample variance uses (n-1) instead of n in the denominator to provide an unbiased
+  estimate of the population variance.
+
+  For Age-1 the variation is: 1
+  For Age-2 variation is : 4 
+
+  So variance is clearly giving that dispersion of the given 
+  data is more for Age-2 as we already seen 
+
+  Why Sample variance has divided by (n-1)?
+
+  This correction for sample is called basil correction 
+
+  Usually from sample data we make inference on population data mean, population data variance etc..
+
+  Sample data means we randomly select some data from population
+  
+  case-1: sample mean and variance are nearer to the population mean, then there are no issues, 
+
+  case-2: Where we chosesn sample values such that sample mean is 
+  far away from population mean.
+  in this scenario if we keep the denominator to (n-1) instead of n 
+  then for sample data the variance error can be reduced from the 
+  population variance. That means we are not going to under estimate the population variance 
+  The modified formulae of variance for sample data is called: 
+  Basil correction 

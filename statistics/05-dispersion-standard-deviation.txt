@@ -1,0 +1,27 @@
+Standard deviation says how far a data point is away from the mean 
+abs(mean - data point value) gives the measure how far its away 
+from the mean 
+
+
+
+⏺ Population Standard Deviation:
+  σ = √(Σ(x - μ)² / N)
+
+  Where:
+  - σ (sigma) = population standard deviation
+  - x = each individual value
+  - μ = population mean
+  - N = total number of values in the population
+
+  Sample Standard Deviation:
+  s = √(Σ(x - x̄)² / (n - 1))
+
+  Where:
+  - s = sample standard deviation
+  - x = each individual value
+  - x̄ = sample mean
+  - n = sample size
+  - (n - 1) = degrees of freedom
+
+  Standard deviation is simply the square root of variance, so it's measured in the same units as the
+  original data.
