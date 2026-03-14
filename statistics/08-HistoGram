@@ -1,0 +1,24 @@
+Let's take random varibale of weights of people 
+X = {43,23,24,41,25,62,87,91,45,90,87}
+
+We can plot over X- Axis the points that exists such that we draw 
+distribution line of all the points. This is called 
+the histogram
+Between 20-30 -> 3 points 
+Between 30-40 -> 0 points 
+Between 40-50 -> 3 points 
+Betweeb 50-60 -> 0 points 
+Betwen  60-70  -> 1 point 
+Between 70-80 -> 0 points 
+Between 80-90 -> 3 points 
+Histogram is plotted with bins, 0-10 1 bin, 10-20 another bin like that 
+X axis bins and Y axis frequency: 1 2 3 count how many points 
+are there in each bin 
+We have 2 types of histograms, continous and discrete, with each 
+we get different types of hostogram 
+
+We can derive probability density function from histogram 
+by making curve which is touching all the bins 
+The smoothening one is called the kernel density estimator 
+
+histogram -> Kernel Density Estimator -> Probability Density Function 
