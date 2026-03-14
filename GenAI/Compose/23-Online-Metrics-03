@@ -1,0 +1,22 @@
+Latency metrics
+System response time: Measures the time it takes for the Smart Compose suggestions 
+to appear after the user begins typing. It's important to 
+ensure this metric stays below a certain threshold 
+so the suggestions are made before the user types them.
+
+Example:
+
+When we talk about a "threshold" in this context, we mean a maximum allowable time limit for the system to deliver its suggestion. If the system takes longer than this threshold, it's considered too slow and negatively impacts the user experience.
+
+Regarding your question: "After I type a single letter, within 100 milliseconds?"
+
+It's a bit more nuanced than every single letter, but your understanding of the 100-millisecond target is correct for the overall response.
+
+Here's a practical breakdown:
+
+The Triggering Point: The Smart Compose feature (specifically, the "Triggering service" mentioned in the chapter) doesn't necessarily generate a suggestion after every single letter you type. It waits for enough context to be useful. For example:
+
+If you just type "H", it might not trigger a suggestion yet because there are too many possibilities ("Hello", "Hi", "How", etc.).
+If you type "I hope you a...", the triggering service might decide now there's enough context to make a meaningful suggestion (like "are doing well").
+The 100 Millisecond Window Starts: The moment that "Triggering service" decides "Okay, I have enough context, let's generate a suggestion!" – that's when the 100-millisecond clock effectively starts ticking for the entire system.
+
