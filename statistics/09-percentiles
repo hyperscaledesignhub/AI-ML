@@ -1,0 +1,23 @@
+suppose we have a group of numbers that are present {10,13,14,15,16,17,19}
+odd numbers in this group are: 4 
+Percentage of odd numbers in this group are: (4/7)*100 = 55%    
+
+Percentile: Its a value below which certain percentage of observations 
+lie 
+if we take group of numbers {10,11,2,9,1,13,9,7,6,8,5,3,7,7,5}
+percentile of 7 = (number of values below 7)/ (total number of values)
+= (5/15)*100 = 33 percentile 
+Percentile of 11 = (13/15)*100 = 86 percentile 
+
+Suppose we want to find the reverse of it: 
+what is 90 th percentile of the given numbers:
+formulae = (percentile/100)*(n+1)
+(90/100)*(15+1)= 16 * (.9) = 14.4 
+
+
+there is no 14.5 
+14th value is 11, 15th value is 13. 
+Interpolate: 11 + 0.4 × (13 - 11) = 11 + 0.8 = 11.8
+This is the value, eventhough its not exist bit its the value 
+That means 90% of the above values are less than 11.8 
+
