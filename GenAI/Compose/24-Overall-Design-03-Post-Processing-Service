@@ -1,0 +1,14 @@
+It does the following:
+
+1. Make the sentence Gender Neutral: 
+he or she replaced with "they"
+
+2. Gender neutral word replacement: For ex: 
+chairman to chairperson ; policeman to police officer 
+
+3. Lexical analysis for sensitive terms: 
+Some of the inappropriate terms such as age,race, disablity are removed and transformed into
+respectful sentences
+
+4. NSFW( Not safe to work) content filtering:
+Use predefined filter of NSFW keywords and phrases to filter them 

@@ -8,7 +8,7 @@ set -e  # Exit on any error
 echo "🔄 Starting Git Auto-Sync..."
 
 # Navigate to the repository directory
-REPO_DIR="/Users/vijayabhaskarv/ml-projects/rag/advanced-rag/github"
+REPO_DIR="/Users/vijayabhaskarv/IOT/github/AI-ML"
 cd "$REPO_DIR"
 
 echo "📍 Working in: $(pwd)"

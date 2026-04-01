@@ -1,0 +1,5 @@
+Triggering service:
+
+This is the service measure the number of letters typed in terms of triggers before calling the next service which helps for suggesting the next words
+For ex: When user typing the word "i", it shouldn't call the next service for suggestions.
+After user typed few words like "I am leaving .." then it can trigger the next one for suggestions 
