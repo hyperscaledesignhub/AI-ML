@@ -1,0 +1,52 @@
+Simpler terms:
+Encoder always calculates self attention on future tokens w.r.t current
+token 
+Where as decoder calculates self attention on only 
+past tokens relative to the current token
+
+Below explained with example
+
+
+Let's use the sentence: "The cat sat on the mat."
+
+Encoder's Perspective (Bidirectional Attention)
+Imagine the encoder is processing the English input sentence: "The cat sat on the mat."
+
+When the encoder calculates the representation for the word "sat":
+
+It can look at "The" (past token).
+It can look at "cat" (past token).
+It can look at "on" (future token relative to "sat").
+It can look at "the" (future token relative to "sat").
+It can look at "mat" (future token relative to "sat").
+Why? Because the encoder's goal is to fully understand the entire input sentence. To understand "sat" effectively, it benefits from knowing what came before it ("The cat") and what came after it ("on the mat"). For example, "sat" could refer to sitting down, or it could be part of "he sat a record." Seeing "on the mat" helps disambiguate and build a complete understanding of "sat" within this specific sentence.
+
+The encoder processes the whole sentence at once and builds context for each word by letting it attend to all other words in the input.
+
+Decoder's Perspective (Causal/Unidirectional Attention)
+Now, imagine the decoder is generating the French translation for "The cat sat on the mat." Let's say the target translation is "Le chat s'est assis sur le tapis."
+
+The decoder generates one word at a time, sequentially.
+
+Generating "Le":
+
+The decoder has <BOS> (Begin Of Sentence token) and the encoder's understanding of "The cat sat on the mat."
+It predicts "Le."
+Generating "chat":
+
+The decoder now has <BOS>, "Le," and the encoder's information.
+When deciding on "chat," it can look at <BOS> and "Le."
+It CANNOT look at "s'est," "assis," "sur," "le," or "tapis" because those haven't been generated yet. They are "future" tokens in the output sequence.
+Generating "s'est":
+
+The decoder now has <BOS>, "Le," "chat," and the encoder's information.
+When deciding on "s'est," it can look at <BOS>, "Le," and "chat."
+It CANNOT look at "assis," "sur," "le," or "tapis."
+And so on for each subsequent word.
+
+Why? This is crucial for generation. The decoder is learning to predict the next word based only on the context it has available so far (the source sentence and the words it has already generated). If it could peek ahead at the correct "future" words it's supposed to produce, it wouldn't be learning to truly generate; it would just be copying from the answer key. This masking ensures that the decoder learns a realistic generative process.
+
+In summary:
+
+Encoder: Reads the entire input sentence (like reading a finished book) and can use context from anywhere in the sentence to understand each word.
+Decoder: Writes the output sentence word by word (like writing a book, one word at a time) and can only use the context of what it has already written (plus the understanding from the encoder about the source). It can't "see" what it's going to write next.
