@@ -1,0 +1,10 @@
+Online evaluation measures how a model performs in real time as users interact with the system. To evaluate the Smart Compose feature in an online environment,These online metrics measure user engagement, the model's latency, and the overall impact on user experience.
+
+offline metrics, which are usually standard, online evaluation metrics are defined based on specific requirements and needs.
+
+We focus on the following metrics:
+
+User engagement metrics
+Effectiveness metrics
+Latency metrics
+Quality metrics
