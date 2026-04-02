@@ -1,0 +1,41 @@
+
+What is pre training?
+
+Pre training means training a model on large volume of general text data 
+
+How model shapes up after pretraining?
+After pretraining model is capable of understanding natural language 
+including syntax and language structures 
+
+Pretraining Data:
+
+What data is used for pre training?
+Data from common crawl which is the internet data collected since 2008
+contains peta bytes of data 
+
+MLObjective and loss function
+
+What is ML Objective?
+ML Objective means formalised goal that training process aim to acheive 
+
+What is ML Objective in  Gmail Smart compose?
+
+The ML objective in Smart compose is next token prediction. 
+For ex: After i write: "I hope you are -  ", then it predicts "doing" 
+
+Text Generation tasks next token prediction is well suited. Because 
+system incrementally generating new text by predicting the next token
+until EOS token is reached 
+
+Why we need loss function?
+This is going to optimise the model for correctly predicting the 
+next token 
+This measure the difference bewteen expected output and generated output 
+This loss updates the model parameters to produce more accurate probabilities in the future
+
+How model computes loss?
+
+Suppose in a sentence "How Are you", model computes 
+loss of each token, How, Are and You in parallel.
+This is going to speed up training process by computing loss of all
+tokens 

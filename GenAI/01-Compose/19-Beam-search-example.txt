@@ -1,0 +1,74 @@
+Let's break down beam search with an easy example, using "I hope you are" as our starting partial email and a beam width (k) of 3.
+
+Imagine you're trying to complete the sentence "I hope you are".
+
+Step 1: Initialization
+Input: Your partial email is "I hope you are".
+Model Prediction: The model processes "I hope you are" and predicts probabilities for the very next word:
+P("well" | "I hope you are") = 0.6
+P("good" | "I hope you are") = 0.3
+P("having" | "I hope you are") = 0.08
+P("happy" | "I hope you are") = 0.05
+... (and many other words with lower probabilities)
+Beam Search Selects Top-k: Since our beam width is 3, we pick the top 3 most probable words:
+Sequence 1: "I hope you are well" (Cumulative Probability: 0.6)
+Sequence 2: "I hope you are good" (Cumulative Probability: 0.3)
+Sequence 3: "I hope you are having" (Cumulative Probability: 0.08)
+These are our initial 3 candidate paths.
+
+Step 2: Expansion
+Now, we extend each of these 3 sequences by one more word.
+
+Extend Sequence 1: "I hope you are well" (Prob: 0.6)
+
+Model predicts next words for "I hope you are well":
+P("." | "I hope you are well") = 0.7
+P("and" | "I hope you are well") = 0.2
+P("today" | "I hope you are well") = 0.05
+New potential longer sequences:
+"I hope you are well ." (Cumulative: 0.6 * 0.7 = 0.42)
+"I hope you are well and" (Cumulative: 0.6 * 0.2 = 0.12)
+"I hope you are well today" (Cumulative: 0.6 * 0.05 = 0.03)
+Extend Sequence 2: "I hope you are good" (Prob: 0.3)
+
+Model predicts next words for "I hope you are good":
+P("." | "I hope you are good") = 0.6
+P("at" | "I hope you are good") = 0.3
+P("with" | "I hope you are good") = 0.08
+New potential longer sequences:
+"I hope you are good ." (Cumulative: 0.3 * 0.6 = 0.18)
+"I hope you are good at" (Cumulative: 0.3 * 0.3 = 0.09)
+"I hope you are good with" (Cumulative: 0.3 * 0.08 = 0.024)
+Extend Sequence 3: "I hope you are having" (Prob: 0.08)
+
+Model predicts next words for "I hope you are having":
+P("a" | "I hope you are having") = 0.8
+P("fun" | "I hope you are having") = 0.1
+P("some" | "I hope you are having") = 0.05
+New potential longer sequences:
+"I hope you are having a" (Cumulative: 0.08 * 0.8 = 0.064)
+"I hope you are having fun" (Cumulative: 0.08 * 0.1 = 0.008)
+"I hope you are having some" (Cumulative: 0.08 * 0.05 = 0.004)
+Now we have a total of 9 potential sequences.
+
+Step 3: Pruning
+We look at all 9 newly generated sequences and their cumulative probabilities, and again, we select only the top 3 (our beam width).
+
+Here are all 9 sequences and their probabilities, sorted:
+
+"I hope you are well ." (0.42)
+"I hope you are good ." (0.18)
+"I hope you are well and" (0.12)
+"I hope you are good at" (0.09)
+"I hope you are having a" (0.064)
+"I hope you are well today" (0.03)
+"I hope you are good with" (0.024)
+"I hope you are having fun" (0.008)
+"I hope you are having some" (0.004)
+The top 3 sequences (our new beam for the next iteration) are:
+
+"I hope you are well ." (0.42)
+"I hope you are good ." (0.18)
+"I hope you are well and" (0.12)
+This process (Expansion and Pruning) would repeat, generating one word at a time for each of the top 3 paths
+, until a special "end of sequence" token (<EOS>) is predicted for all paths, or a maximum sentence length is reached. Finally, the path with the highest cumulative probability among the completed sentences would be chosen as the Smart Compose suggestion.

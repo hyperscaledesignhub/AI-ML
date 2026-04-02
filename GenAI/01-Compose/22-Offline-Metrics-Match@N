@@ -1,0 +1,21 @@
+ExactMatch@N is a straightforward metric for evaluating generative models like Smart Compose.
+
+Here's a simple and short explanation for your notes:
+
+ExactMatch@N
+
+Measures how often a generated suggestion exactly matches the 
+first N words of the actual (ground truth) text. 
+It's calculated as the percentage of suggestions 
+where this exact match occurs.
+
+N: The specific number of words you're checking for an exact match.
+Higher score: Means the model is better at predicting the exact next N words.
+
+Example (ExactMatch@3):
+Ground Truth: "I hope you are doing well."
+Suggestion 1: "I hope you are fantastic."
+First 3 words: "I hope you" (Matches "I hope you" from ground truth) -> Match!
+Suggestion 2: "I hope to see you."
+First 3 words: "I hope to" (Does NOT match "I hope you" from ground truth) -> No Match!
+If these were the only two suggestions, the ExactMatch@3 score would be 1/2 = 0.50 (or 50%).

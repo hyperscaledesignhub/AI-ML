@@ -1,0 +1,17 @@
+Beam search is a smarter way to generate text than greedy search. Instead of just picking the single most probable next word, it keeps track of the top-k most likely sequences (where 'k' is the "beam width") at each step.
+
+Here's the simplified process:
+
+Initialization: Start with your input. The model suggests many next words. 
+Beam search picks the 'k' best starting words/phrases.
+Expansion: For each of those 'k' current best phrases, it predicts the next possible words, 
+creating many new longer phrases.
+Pruning: From all these new, longer phrases, it again 
+selects only the 'k' absolute best, based on their total probability so far.
+This process repeats until phrases are complete. It's better than greedy search because 
+it explores more options, leading to more coherent results.
+
+For Smart Compose, beam search is ideal because suggestions are usually 
+short (so it's not too expensive) and consistency/accuracy are 
+more important than generating wildly diverse text.
+

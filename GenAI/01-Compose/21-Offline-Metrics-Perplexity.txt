@@ -1,0 +1,55 @@
+Perplexity is a metric used to evaluate language models that measures how
+  well a model predicts a sequence of words. It quantifies the "surprise" or
+  uncertainty of the model when encountering the actual text.
+
+  Definition
+
+  Perplexity is the exponential of the average negative log-likelihood of a
+  sequence:
+
+  Perplexity = exp(-1/N × Σ log P(wi | w1, w2, ..., wi-1))
+
+  Where:
+  - N = number of words in the sequence
+  - P(wi | context) = probability the model assigns to word wi given the
+  context
+  - Lower perplexity = better model performance
+
+  Intuitive Understanding
+
+  - Low perplexity: Model is confident and accurate in its predictions
+  - High perplexity: Model is uncertain and makes poor predictions
+  - Perplexity of 1 = perfect prediction
+  - Perplexity of V (vocabulary size) = random guessing
+
+  Example
+
+  Consider the sentence: "The cat sat on the mat"
+
+  Good Model (assigns high probabilities):
+  - P("The") = 0.8
+  - P("cat" | "The") = 0.7
+  - P("sat" | "The cat") = 0.6
+  - P("on" | "The cat sat") = 0.8
+  - P("the" | "The cat sat on") = 0.9
+  - P("mat" | "The cat sat on the") = 0.5
+
+  Average log-likelihood = -1/6 × (log(0.8) + log(0.7) + log(0.6) + log(0.8) +
+  log(0.9) + log(0.5))
+  = -1/6 × (-0.97) = 0.16
+  Perplexity = exp(0.16) = 1.17
+
+  Poor Model (assigns low probabilities):
+  - Average probability per word = 0.1
+  - Average log-likelihood = log(0.1) = -2.3
+  - Perplexity = exp(2.3) = 10
+
+  Practical Use
+
+  - GPT models: Perplexity ~20-40 on common datasets
+  - Translation: Lower perplexity correlates with better BLEU scores
+  - Text generation: Helps choose between model architectures
+  - Comparison: Only meaningful when comparing models on the same dataset
+
+  Perplexity is particularly valuable for language modeling tasks like text
+  generation, machine translation, and speech recognition.

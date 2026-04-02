@@ -1,0 +1,46 @@
+METEOR
+
+METEOR (Metric for Evaluation of Translation with Explicit ORdering) [18] is a popular metric for evaluating language translation models. It calculates precision and recall and then combines these measurements using a weighted harmonic mean.
+
+Unlike BLEU and ROUGE, which rely on exact n-gram matches, METEOR considers synonyms and the morphology of words
+
+This is the most distinctive step. METEOR attempts to find the "best" possible alignment between the words in the candidate translation and the words in the reference translation. It does this in a hierarchical, greedy fashion, prioritizing certain types of matches:
+
+Exact Matches: First, it tries to find words that are identical in both sentences.
+Stemmed/Morphological Matches: If no exact match, it checks if words share the same stem after stemming/lemmatization (e.g., "run" and "running").
+Synonym Matches: If still no match, it checks if words are synonyms according to its linguistic resources (e.g., "cat" and "feline").
+Paraphrase Matches (less common but possible): Some advanced METEOR versions might even look for paraphrases, though this adds significant complexity.
+Key Rule: Each word in the candidate can only be aligned with one word in the reference, and vice-versa. This prevents double-counting. The alignment algorithm aims to maximize the number of matched words.
+
+Example of Alignment:
+
+Reference (R): "The cat is running fast."
+Candidate (C): "A feline runs quickly."
+An alignment could look like:
+
+"cat" (R) <-> "feline" (C) (Synonym match)
+"running" (R) <-> "runs" (C) (Stem match)
+"fast" (R) <-> "quickly" (C) (Synonym match)
+Let's assume there are 3 matched words in this scenario.
+
+3. Calculate Precision (P) and Recall (R)
+Once the best alignment is found, METEOR calculates precision and recall, similar to traditional metrics, but only considering the aligned words:
+
+Precision (P):
+$$
+P = \frac{\text{Number of Matched Words}}{\text{Total Number of Words in Candidate}}
+$$
+In our example, if C has 4 words ("A feline runs quickly"):
+$P = 3 / 4 = 0.75$
+
+Recall (R):
+$$
+R = \frac{\text{Number of Matched Words}}{\text{Total Number of Words in Reference}}
+$$
+In our example, if R has 5 words ("The cat is running fast"):
+$R = 3 / 5 = 0.60$
+
+Cons:
+
+Computational complexity:METEOR is harder to implement and takes more time to calculate than BLEU and ROUGE. This is because it requires additional steps, such as synonym and stemming matching.
+Resource dependence: METEOR relies on linguistic resources such as synonym dictionaries and stemming algorithms, which may not be available for all languages.

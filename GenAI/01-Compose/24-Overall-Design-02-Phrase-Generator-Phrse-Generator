@@ -1,0 +1,13 @@
+After user types partial text Triggering service 
+says that text is ready, 
+Now Phrase generator is going to do beam search 
+over the model generated results and it picks up 
+top-k  results 
+
+After it picking up top-k results this is going to 
+do the following:
+
+It applies the following criteria:
+1. Remove long sentences 
+2. Remove low confidence suggestions
+Picks up the remaining words and chose the top one

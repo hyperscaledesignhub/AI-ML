@@ -1,0 +1,23 @@
+Here are the typical personnel assistant requirements 
+1. How many languages that it can speak?
+We focus on a single language 
+2.What are the range of tasks performed by the chatbot?
+Chatbot can perform tasks like 
+    a. Questions and answers to the users
+    b. Any general information about anything 
+3.Does this chatbot take input or output non-text  modalities 
+ like  audio,video and image? 
+ No 
+4. Does this chatbot support web browsing, searching and calling 
+external APIs?
+    a. We don't support them at this point 
+5. Does this chatbot support follow up questions during converations? 
+How much context window it supports?
+  a. Within the same conversational session chatbot must be able to 
+  support follow up questions 
+  b. Context window size it supports is 4096 
+6. Does this chatbot support personalised interactions with the people?
+    a. No this is not yet supported 
+7. Does this support instructions based training data? 
+    a. Yes we have data set with millions of examples of instructions 
+    and answers

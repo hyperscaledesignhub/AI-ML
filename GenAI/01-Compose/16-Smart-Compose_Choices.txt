@@ -1,0 +1,10 @@
+For Gmail Smart Compose, deterministic generation methods are chosen over stochastic ones because they offer:
+
+Consistency: Users expect predictable suggestions that don't change drastically for the same input,
+ ensuring a reliable experience.
+Focus on common phrases: In an email context, the goal is often to suggest the most probable and conventional 
+completions, which deterministic methods prioritize.
+Reduced risk of inappropriate suggestions: By avoiding randomness, deterministic methods minimize the chance 
+of generating unexpected or unsuitable text, which is critical for professional communication like emails.
+Within deterministic methods, the two main algorithms to consider are 
+Greedy search and Beam search.

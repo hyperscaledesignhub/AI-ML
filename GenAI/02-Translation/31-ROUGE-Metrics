@@ -1,0 +1,60 @@
+ ROUGE metrics
+
+ The key takeaway is that ROUGE is "Recall-Oriented", meaning it focuses on whether the important information from the reference is present in the candidate (machine-generated) text.
+
+ This is a direct contrast to BLEU, which is precision-oriented (focused on whether the information in the candidate is correct and present in the reference).
+
+ How ROUGE-N Recall is Calculated?
+
+  It measures the ratio of n-gram overlaps between the candidate and reference texts. 
+   Recall = 
+ (Total number of n-grams in the reference)/
+ (Number of matching n-grams in reference)
+
+ROUGE denominator has all the counts  of n grams from the original reference text 
+
+Where as BLEU precsion denominator contain: Total number of n-grams present in the candidate text. 
+Here is the example:
+
+Reference Translation (R): "The cat sat on the mat."
+Let's consider two different Candidate Translations and see how BLEU's p2 (precision for bigrams) and ROUGE-2 Recall differ.
+
+Breakdown of Bigrams:
+Bigrams in Reference (R):
+("The cat"), ("cat sat"), ("sat on"), ("on the"), ("the mat")
+Total Bigrams in R = 5
+
+
+Now, let's consider a candidate that includes most of the reference but also adds some incorrect or superfluous information.
+
+Candidate Translation 2 (C2): "The cat sat on the red mat."
+Step-by-step Calculation for C2:
+Bigrams in C2:
+
+("The cat"), ("cat sat"), ("sat on"), ("on the"), ("the red"), ("red mat")
+Total Bigrams in C2 = 6
+Matching Bigrams (between C2 and R):
+
+("The cat") - Match
+("cat sat") - Match
+("sat on") - Match
+("on the") - Match
+("the red") - No match in R
+("red mat") - No match in R (R has "the mat")
+Number of Matching Bigrams = 4
+Calculate BLEU p2 for C2:
+$$
+\text{BLEU p2 (C2)} = \frac{\text{Number of Matching Bigrams}}{\text{Total Bigrams in Candidate Translation 2}} = \frac{4}{6} \approx \textbf{0.67}
+
+Calculate ROUGE-2 Recall for C2:
+$$
+\text{ROUGE-2 Recall (C2)} = \frac{\text{Number of Matching Bigrams}}{\text{Total Bigrams in Reference Translation}} = \frac{4}{5} = \textbf{0.8}
+$$
+
+
+
+
+
+
+
+​
